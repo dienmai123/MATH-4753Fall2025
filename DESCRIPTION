@@ -1,16 +1,16 @@
 Package: Fall254753mai0012
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Example Functions for Lab Assignments
 Version: 0.1.0
 Authors@R: c(
     person(
-      "Jane", "Doe",
-      email = "jane@example.com",
+      "Dien", "Mai",
+      email = "dien.q.mai-1@ou.edu",
       role = c("aut", "cre")
     )
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
+Description: Example package built for MATH 4753 labs. 
+    Includes functions developed across lab assignments.
+License: GPL-3
 Encoding: UTF-8
-LazyData: true
+RoxygenNote: 7.3.3
