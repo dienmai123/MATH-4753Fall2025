@@ -1,0 +1,51 @@
+---
+title: "The Birthday Problem"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+vignette: >
+  %\VignetteIndexEntry{The Birthday Problem}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+# 1. Mathematical derivation (LaTeX)
+
+Let $n$ be the class size and assume $365$ equally likely birthdays, independent.  
+The probability that no two people share a birthday is
+
+\[
+P(\overline{A}) = \frac{365 \cdot 364 \cdot \dots (365-n+1)}{365^n}
+= \frac{365!}{(365-n)! \, 365^n}.
+\]
+
+Therefore the probability of at least one shared birthday is
+
+\[
+P(A) = 1 - P(\overline{A}).
+\]
+
+# 2. Reformulation using `lfactorial` and `lchoose`
+
+Taking logs,
+
+\[
+\log P(\overline{A}) = \log n! + \log \binom{365}{n} - n \log 365.
+\]
+
+So in R notation,
+
+\[
+P(A) = 1 - \exp\!\Big( \operatorname{lfactorial}(n) + \operatorname{lchoose}(365,n) - n \log 365 \Big).
+\]
+
+# 3. Show the body of the function
+
+```{r}
+Fall254753mai0012::birthday
+Fall254753mai0012::birthday(n = 20:25)
+```
