@@ -1,5 +1,6 @@
 ---
 title: "The Birthday Problem"
+author: "Dien Mai"
 output:
   rmarkdown::html_vignette:
     toc: true
