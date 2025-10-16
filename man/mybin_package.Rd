@@ -7,19 +7,21 @@
 mybin_package(iter = 100, n = 10, p = 0.5)
 }
 \arguments{
-\item{iter}{Number of iterations}
+\item{iter}{Number of iterations (simulations).}
 
-\item{n}{Number of trials per iteration}
+\item{n}{Number of trials in each iteration.}
 
-\item{p}{Probability of success}
+\item{p}{Probability of success.}
 }
 \value{
-A barplot of simulated proportions and a table of frequencies
+A named numeric vector of simulated proportions for k = 0, 1, ..., n.
 }
 \description{
-This function simulates repeated binomial trials and plots
-the distribution of successes.
+Simulate repeated Binomial(n, p) trials and plot the distribution of
+the number of successes.
 }
 \examples{
+\donttest{
 mybin_package(iter = 1000, n = 10, p = 0.5)
+}
 }

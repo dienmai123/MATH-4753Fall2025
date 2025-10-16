@@ -2,4 +2,5 @@
 
 export(birthday)
 export(mybin_package)
+export(myncurve)
 export(piecewise_pred)
